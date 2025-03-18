@@ -342,11 +342,15 @@ const Product = () => {
   return (
     <>
       <Navbar />
-      <div className=" relative max-w-7xl mx-auto px-4 py-8 2xl:max-w-[2000px] 2xl:px-8 h-max overflow-auto 2xl:py-12">
-        <div className="  flex flex-col  md:flex-row gap-8 2xl:gap-12 h-max  ">
-          
-          <Categories onCategorySelect={handleCategorySelect}  />
-         
+      <div className="max-w-7xl mx-auto px-4 py-8 2xl:max-w-[2000px] 2xl:px-8 h-max overflow-auto 2xl:py-12 items-start">
+        <div className=" relative p-4 flex flex-col  md:flex-row gap-8 2xl:gap-12 h-max  items-start ">
+          <div className="relative flex items-start h-screen">
+          <div className=" top-0 self-start">
+          <Categories onCategorySelect={handleCategorySelect}/>
+          </div>
+          </div>
+       
+      
           {/* Main Content */}
           <div className="flex-1">
             <h1 className="text-2xl md:text-3xl 2xl:text-6xl font-bold font-Poppins mb-6 2xl:mb-10 animate-fade-in">

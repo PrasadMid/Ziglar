@@ -148,7 +148,9 @@ const Navbar = () => {
                 >
                   Products
                 </Link>
-                <a className="text-gray-600 text-center lg:text-left cursor-pointer transition-all duration-300 hover:bg-gradient-to-r hover:from-[rgba(125,207,182,1)] hover:to-[rgba(9,156,214,1)] hover:text-transparent hover:bg-clip-text">
+                <a className="text-gray-600 text-center lg:text-left cursor-pointer transition-all duration-300 hover:bg-gradient-to-r hover:from-[rgba(125,207,182,1)] hover:to-[rgba(9,156,214,1)] hover:text-transparent hover:bg-clip-text" 
+                href="https://midknighttestdomain.site/api/v1/get-qlc-info"
+                aria-label="QIC Info">
                   QIC
                 </a>
                 <Link

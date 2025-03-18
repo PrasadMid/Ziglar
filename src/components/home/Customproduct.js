@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Constant from "../../utils/Constant";
+import { motion } from "framer-motion";
 
 function Customproduct() {
   const [customData, setCustomData] = useState(null);
@@ -33,13 +34,21 @@ function Customproduct() {
       >
         <div className="xl:max-w-6xl xl:mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-2 xsm:grid-cols-1 xl:gap-12 2xl:gap-20">
           <div className="space-y-6 animate-fade-in">
-            <div className="bg-white p-8 rounded-2xl shadow-lg w-fit hover-float animate-scale-in">
-              <img
-                src={customData?.custom_products_craft_image}
-                alt="Custom Products"
-                className="xl:w-[400px] xl:h-[256px] 2xl:w-[800px] 2xl:h-[450px] transform transition-transform duration-700 hover:scale-105"
-              />
-            </div>
+          <div className="bg-white p-8 rounded-2xl shadow-lg w-fit">
+    {customData?.custom_products_craft_image ? (
+      <img
+        src={customData.custom_products_craft_image}
+        alt={customData.custom_products_craft_name || "Custom Products"}
+        className="xl:w-[400px] xl:h-[256px] 2xl:w-[800px] 2xl:h-[450px] transform transition-transform duration-700 hover:scale-105 animate-slideInFromLeft"
+        loading="lazy"
+        role="img"
+        aria-label={`Image of ${customData.custom_products_craft_name || "Custom Product"}`}
+      />
+    ) : (
+      <p className="text-gray-500">Image not available</p>
+    )}
+  </div>
+
             <div className="text-white xl:leading-[40px] xsm:leading-[27px] 2xl:leading-[50px] animate-slide-up">
               <h2 className="xl:text-[32px] xsm:text-[22px] 2xl:text-[45px] font-sans font-bold xl:mb-2 animate-text-focus">
                 {customData?.custom_products_craft_title}

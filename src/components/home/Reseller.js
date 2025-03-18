@@ -100,16 +100,15 @@ function Reseller() {
               style={{ animationDelay: "0.6s" }}
             >
               <button
-                className="xl:px-6 xl:py-2.5 text-[12px] 2xl:text-[25px] xsm:px-[6px] 2xl:px-[15px] 2xl:py-4 font-bold font-sans text-white rounded-lg flex items-center gap-2 hover:scale-105 transition-transform"
+                className="xl:px-6 xl:py-2.5 text-[12px]  2xl:text-[25px] xsm:px-[6px] 2xl:px-[15px] 2xl:py-4 font-bold font-sans text-white rounded-lg flex items-center gap-2 hover:scale-105 transition-transform"
                 style={{
-                  background:
-                    "linear-gradient(to right, rgba(125, 207, 182, 1), rgba(9, 156, 214, 1))",
+                  background: "radial-gradient(circle, rgba(11,47,231,0.9052871148459384) 0%, rgba(70,141,252,1) 100%)",
+                  width: "30%",
+                  height: "50px",
                 }}
               >
                 Let's Work Together
-                <span className="text-lg 2xl:text-[25px] animate-bounce">
-                  →
-                </span>
+              
               </button>
               <Link to="/aboutus">
                 <button className="px-6 py-2.5 2xl:text-[30px] text-[#0B63E5] font-bold font-sans rounded-lg transition-all hover:bg-blue-50">
@@ -162,7 +161,7 @@ function Reseller() {
             <img
               src={partnerData?.join_us_partner_or_reseller_image}
               alt="Team collaboration"
-              className="xl:w-[687px] xl:h-[723px] 2xl:w-[1000px] 2xl:h-[1200px] rounded-lg shadow-lg hover:transform hover:scale-105 transition-all duration-500"
+              className="xl:w-[500px] xl:h-[500px] 2xl:w-[1000px] 2xl:h-[1200px] rounded-lg shadow-lg hover:transform hover:scale-105 transition-all duration-500"
             />
           </div>
         </div>
